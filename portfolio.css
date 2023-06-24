@@ -1,0 +1,200 @@
+@font-face {
+    font-family: Dancing;
+    src: url(Fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Dyna;
+    src: url(Fonts/DynaPuff/DynaPuff-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: Lobster;
+    src: url(Fonts/Lobster/Lobster-Regular.ttf);
+}
+@font-face {
+    font-family: Josefin;
+    src: url(Fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Noto;
+    src: url(Fonts/static/NotoSerif-Regular.ttf);
+}
+/* Home Section CSS */
+.nav-bar{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+h1.home-title{
+    padding-bottom: 3%;
+    font-size: 60px;
+    color: white;
+}
+a.borderless{
+    border: 0 none;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+a.borderless:hover{
+    color: yellow;
+}
+i.fa{
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.5em 0.6em;
+    background-color: white;
+    color: black;
+}
+.mySlides{
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    left: auto;
+    /* top: 0; */
+    animation: fadeIn ease 45s infinite;
+    animation-delay: 9s;
+
+    -webkit-animation: fadeIn 45s infinite;
+    -webkit-animation-delay: 9s;
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    13% {opacity: 1;}
+    20% {opacity: 0;}
+    93% {opacity: 0;} 
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 1;}
+    13% {opacity: 1;}
+    20% {opacity: 0;}
+    93% {opacity: 0;} 
+    100% {opacity: 1;}
+}
+
+/* About Section CSS */
+
+.body-margin{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+a.about-title{
+    display: block;
+    padding-top: 2%;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.nav-item{
+    color: black;
+    font-family: Noto;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-item:hover{
+    color: red;
+}
+.nav-tabs{
+    border-bottom: none;
+}
+.profile{
+    width: 100%;
+    height: 800px;
+    /* padding: 5% 5% 3%; */
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+.aboutMe{
+    font-size: 50px;
+}
+.mySelf{
+    font-family: Noto;
+    font-size: 20px;
+    line-height: 2;
+}
+.resume{
+    font-size: 25px;
+    font-family: Noto;
+    margin-left: 35%;
+    padding: 2%;
+}
+.icons .fa{
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.7em 0.8em;
+    background-color: black;
+    color: white;
+}
+
+/* Learning experiences Section */
+#menu{
+    border: none;
+}
+.experience-title{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+.learning-image{
+    width: 400px;
+    height: 220px;
+    float: left;
+    margin-right: 40px;
+}
+.p-right{
+    padding-top: 60px;
+    padding-bottom: 100px;
+    text-align: justify;
+    font-family: Noto;
+    font-size: 18px;
+}
+.clear{
+    clear: both;
+}
+
+/* Academic Section */
+.academic-profile{
+    width: 500px;
+    height: 600px;
+    float: left;
+}
+.academic-text{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 15%;
+}
+.university{
+    font-family: Noto;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-bottom: 20%;
+}
+.academic-year{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    margin-left: 60%;
+}
+.academic-year > h3{
+    text-align: center;
+}
+.basic-education{
+    font-family: Noto;
+    font-size: 20px;
+    padding-left: 20px;
+}
