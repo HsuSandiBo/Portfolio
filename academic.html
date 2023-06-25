@@ -12,47 +12,48 @@
 <body class="body-margin">
         <a class="about-title" href="index.html"><h1>HSU SANDI BO</h1></a>
         <nav class="navbar navbar-expand-lg justify-content-center">
-            <div class="navbar-nav nav-tabs">
-                <a class="nav-item nav-link" href="index.html" target="_blank">Home</a>
-                <a class="nav-item nav-link" href="about.html">About Me</a>
-                <a class="nav-item nav-link active" href="#">Learning Experiences</a>
-                <a class="nav-item nav-link" href="academic.html">Academic</a>
+            <div class="navbar-nav nav-tabs">  <!--d-none d-lg-inline not work in here-->
+                <a class="nav-item nav-link me-3" href="index.html" target="_blank">Home</a>
+                <a class="nav-item nav-link me-3" href="about.html">About Me</a>
+                <a class="nav-item nav-link me-3" href="learningExperiences.html">Learning Experiences</a>
+                <a class="nav-item nav-link active me-3" href="#">Academic</a>
                 <div class="dropdown"> <!-- for dropdown only div -->
-                    <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown">Projects</a>
+                    <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown" href="projects.html">Projects</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="index.html" target="_blank">Project 1</a>
                         <a class="dropdown-item" href="#" target="_blank">Project 2</a>
                         <a class="dropdown-item" href="#" target="_blank">Project 3</a>
                     </div>
                 </div>
-            </div>    
+            </div> 
         </nav>
+        <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
 
     <h2 class="experience-title">ACADEMIC BACKGROUND</h2><hr>
     <div class="row flex-column flex-lg-row">
         <img class="academic-profile" src="images/rangsit.jpg">
-        <div class="col">
-        <h2 class="academic-text">Rangsit University</h2>
-        <dl class="university row">
-            <dt class="col-sm-3">Intake</dt>
-            <dd class="col-sm-9">2023 to Present</dd>
+        <div class="rangsit col">
+            <h2 class="academic-text">Rangsit University</h2>
+            <dl class="university row">
+                <dt class="col-sm-3">Intake</dt>
+                <dd class="col-sm-9">2023 to Present</dd>
 
-            <dt class="col-sm-3">Year</dt>
-            <dd class="col-sm-9">First Year</dd>
+                <dt class="col-sm-3">Year</dt>
+                <dd class="col-sm-9">First Year</dd>
 
-            <dt class="col-sm-3">Major</dt>
-            <dd class="col-sm-9">Information and Communication Technology</dd>
+                <dt class="col-sm-3">Major</dt>
+                <dd class="col-sm-9">Information and Communication Technology</dd>
 
-            <dt class="col-sm-3">Grades</dt>
-            <dd class="col-sm-9">3.2</dd>
-        </dl>
+                <dt class="col-sm-3">Grades</dt>
+                <dd class="col-sm-9">3.2</dd>
+            </dl>
         </div>
     </div><hr>
 
-    <div>
+    <div class="row flex-column flex-lg-row">
         <img class="academic-profile" src="images/highschool1.jpg">
-        <div class="academic-year">
-            <h3>Basic Educational High School</h3>
+        <div class="academic-year col">
+            <h4>Basic Educational High School</h4>
             <dl class="basic-education row">
                 <dt class="col-sm-6">Academic Year</dt>
                 <dd class="col-sm-6">2017 to 2019</dd>
@@ -61,7 +62,7 @@
                 <dd class="col-sm-6">High School</dd>
             </dl><br>
             
-            <h3>Basic Educational Middle School</h3>
+            <h4>Basic Educational Middle School</h4>
             <dl class="basic-education row">
                 <dt class="col-sm-6">Academic Year</dt>
                 <dd class="col-sm-6">2013 to 2016</dd>
@@ -70,7 +71,7 @@
                 <dd class="col-sm-6">Middle School</dd>
             </dl><br>
 
-            <h3>Basic Educational Primary School</h3>
+            <h4>Basic Educational Primary School</h4>
             <dl class="basic-education row">
                 <dt class="col-sm-6">Academic Year</dt>
                 <dd class="col-sm-6">2008 to 2012</dd>
@@ -107,6 +108,46 @@
         }   });
         });
         });
+
+        var menu = document.querySelector('#menu');
+        console.log(menu)
+
+        console.log(`screen ${screen.availWidth}`)
+        //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
+        window.addEventListener('resize', e => {
+            // var maxWidth = screen.availWidth - window.innerWidth === 0;
+            
+            if(window.innerWidth == screen.availWidth){ 
+                document.querySelector('nav').style.display = 'flex';
+                document.querySelector('nav').style.textAlign = 'center';
+                document.querySelector('#menu').style.display = 'none';
+            }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
+                document.querySelector('nav').style.display = 'none';
+                document.querySelector('#menu').style.display = 'block';
+            }else{
+                document.querySelector('nav').style.display = 'none';
+                document.querySelector('#menu').style.display = 'block';
+                console.log(window.innerWidth)
+            }
+        })
+
+        menu.addEventListener("click", e => {
+            console.log(document.querySelector('nav').style.display)
+            if(document.querySelector('nav').style.display === 'none'){
+                expand(); //block
+            }else if(document.querySelector('nav').style.display !== 'none'){
+                collapse();
+            }
+        });
+
+        function collapse(){
+            document.querySelector('nav').style.display = 'none';
+        }
+
+        function expand(){
+            document.querySelector('nav').style.display = 'flex';
+            document.querySelector('nav').style.textAlign = 'center';
+        }
     </script>
 </body>
 </html>

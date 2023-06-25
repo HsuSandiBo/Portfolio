@@ -10,23 +10,25 @@
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body class="body-margin">
-    <div class="nav-title">
-        <a class="about-title" href="index.html"><h1>HSU SANDI BO</h1></a>
-        <nav class="nav nav-tabs justify-content-center">
-            <a class="nav-item nav-link" href="index.html" target="_blank">Home</a>
-            <a class="nav-item nav-link active" href="#">About Me</a>
-            <a class="nav-item nav-link" href="learningExperiences.html">Learning Experiences</a>
-            <a class="nav-item nav-link" href="academic.html">Academic</a>
+    <a class="about-title" href="index.html"><h1>HSU SANDI BO</h1></a>
+    <nav class="navbar navbar-expand-lg justify-content-center">
+        <div class="navbar-nav nav-tabs">  <!--d-none d-lg-inline not work in here-->
+            <a class="nav-item nav-link me-3" href="index.html" target="_blank">Home</a>
+            <a class="nav-item nav-link active me-3" href="#">About Me</a>
+            <a class="nav-item nav-link me-3" href="learningExperiences.html">Learning Experiences</a>
+            <a class="nav-item nav-link me-3" href="academic.html">Academic</a>
             <div class="dropdown"> <!-- for dropdown only div -->
-                <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown">Projects</a>
+                <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown" href="projects.html">Projects</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="index.html" target="_blank">Project 1</a>
                     <a class="dropdown-item" href="#" target="_blank">Project 2</a>
                     <a class="dropdown-item" href="#" target="_blank">Project 3</a>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div> 
+    </nav>
+    <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
+
     <img class="profile" src="images/profile.jpg" alt="profile">
     <h1 class="aboutMe">ABOUT ME</h1>
     <p class="mySelf">Hi! My name is Hsu Sandi Bo. I’m 20 years old. I'm an ICT student from Rangsit University.<br>
@@ -64,6 +66,46 @@
         }   });
         });
         });
+
+        var menu = document.querySelector('#menu');
+        console.log(menu)
+
+        console.log(`screen ${screen.availWidth}`)
+        //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
+        window.addEventListener('resize', e => {
+            // var maxWidth = screen.availWidth - window.innerWidth === 0;
+            
+            if(window.innerWidth == screen.availWidth){ 
+                document.querySelector('nav').style.display = 'flex';
+                document.querySelector('nav').style.textAlign = 'center';
+                document.querySelector('#menu').style.display = 'none';
+            }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
+                document.querySelector('nav').style.display = 'none';
+                document.querySelector('#menu').style.display = 'block';
+            }else{
+                document.querySelector('nav').style.display = 'none';
+                document.querySelector('#menu').style.display = 'block';
+                console.log(window.innerWidth)
+            }
+        })
+
+        menu.addEventListener("click", e => {
+            console.log(document.querySelector('nav').style.display)
+            if(document.querySelector('nav').style.display === 'none'){
+                expand(); //block
+            }else if(document.querySelector('nav').style.display !== 'none'){
+                collapse();
+        }
+        });
+
+        function collapse(){
+            document.querySelector('nav').style.display = 'none';
+        }
+
+        function expand(){
+            document.querySelector('nav').style.display = 'flex';
+            document.querySelector('nav').style.textAlign = 'center';
+        }
     </script>
 </body>
 </html>
