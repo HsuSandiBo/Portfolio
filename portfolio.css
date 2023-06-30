@@ -129,7 +129,7 @@ a.about-title{
     line-height: 2;
 }
   @media screen and (min-width: 481px) and (max-width: 768px){  /* For tablets and ipads: 481px to 768px */
-    .nav-item { 
+    .nav-item,list-group-item { 
       font-size: 30px;
     }
     .about-title{
@@ -138,7 +138,7 @@ a.about-title{
   }
 
   @media screen and (min-width: 320px) and (max-width: 480px){  /* For mobile devices: 320px to 480px */
-    .nav-item { 
+    .nav-item,list-group-item { 
       font-size: 40px;
     }
     .about-title{
