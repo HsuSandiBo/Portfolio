@@ -17,3 +17,24 @@ const isMaximizedAndDefaultZoom = isAtMaxWidth && isAtDefaultZoom
 const isFullscreen = window.outerWidth == screen.width && window.outerHeight == screen.height
 isFullScreen=window.matchMedia('(display-mode: fullscreen)').matches;
 isOnHomepage=isFullScreen=window.matchMedia('(display-mode: standalone)').matches;
+
+//For responsive font size 
+// For mobile devices: 320px to 480px 
+// For tablets and ipads: 481px to 768px
+// For laptops: 769px to 1024px 
+// For desktops: 1025px to 1200px
+
+//To calculate font size for various devices
+// Fluid font sizes per breakpoint
+// Screen width	Font size
+// 320px (eg: iPhone 4 & 5)	16px
+// 768px (eg: iPad portrait)	18px
+// 1024px (eg: iPad landscape)	19px
+// 1280px	20px
+// 1536px	21px
+// 1920px	23px
+// 2560px	25px
+
+// html {
+//     font-size: calc(15px + 0.390625vw);
+// }
