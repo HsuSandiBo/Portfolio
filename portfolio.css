@@ -18,6 +18,10 @@
     font-family: Noto;
     src: url(Fonts/static/NotoSerif-Regular.ttf);
 }
+@font-face{
+    font-family: Heebo;
+    src: url(Fonts/static/Heebo-Medium.ttf);
+}
 /* Home Section CSS */
 .nav-bar{
     position: absolute;
@@ -26,15 +30,18 @@
     text-align: center;
     z-index: 5;
 }
-h1.home-title{
+p.home-title{
     padding-bottom: 3%;
+    font-family: Heebo;
     font-size: 60px;
-    color: white;
+    /* color: white; */
 }
 a.borderless{
     border: 0 none;
     text-decoration: none;
     color: white;
+    /* font-size: 18px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: transparent;
     font-weight: bold;
     padding-bottom: 2%;
@@ -94,7 +101,7 @@ a.about-title{
     display: block;
     padding-top: 2%;
     font-size: 40px;
-    color: black;
+    color: blue;
     text-align: center;
     text-decoration: none;
 }
@@ -128,23 +135,7 @@ a.about-title{
     font-size: 20px;
     line-height: 2;
 }
-  @media screen and (min-width: 481px) and (max-width: 768px){  /* For tablets and ipads: 481px to 768px */
-    .nav-item,list-group-item { 
-      font-size: 30px;
-    }
-    .about-title{
-        font-size: 100px;
-    }
-  }
-
-  @media screen and (min-width: 320px) and (max-width: 480px){  /* For mobile devices: 320px to 480px */
-    .nav-item,list-group-item { 
-      font-size: 40px;
-    }
-    .about-title{
-        font-size: 60px;
-    }
-  }  
+/*  */
 .resume{
     font-size: 25px;
     font-family: Noto;
