@@ -70,27 +70,16 @@
         var menu = document.querySelector('#menu');
         console.log(menu)
 
-        // var navItems = document.querySelectorAll('.nav-item');
-        // document.querySelector('.nav-item').style.fontSize = '30px'
-        // console.log(document.querySelector('.nav-item').style.fontSize)
-        // console.log(navItems, navItems[0])
-
-        // navItems.forEach(nav_item => {
-        //         navItems[nav_item].style.fontSize = '30px';
-        //         console.log(navItems[nav_item].style.fontSize)
-        //         });
-
         console.log(`screen ${screen.availWidth}`)
         //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
         window.addEventListener('resize', e => {
             // var maxWidth = screen.availWidth - window.innerWidth === 0;
-            // to know default font size
+            // To output default font size
             // console.log(window.getComputedStyle(document.body).getPropertyValue('font-size'))
             console.log(`inner ${window.innerWidth}`)
-            // console.log(window.matchMedia(('screen and (min-width: 501px)')))
 
             // for laptop screen size 
-            if(window.innerWidth == screen.availWidth && window.matchMedia(('screen and (min-width: 769px) and (max-width: 1536px)')))
+            if(window.innerWidth == screen.availWidth)
             {  
                 document.querySelector('nav').style.display = 'flex';
                 document.querySelector('nav').style.textAlign = 'center';
@@ -98,12 +87,8 @@
                 console.log(document.querySelector('.nav-item').style.fontSize)
             }
             // for tablet screen size
-            else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth && window.matchMedia(('screen and (min-width: 481px) and (max-width: 768px)'))) {
+            else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth) {
                 document.querySelector('nav').style.display = 'none';
-                // navItems.forEach(nav_item => {
-                // // navItems[nav_item].style.fontSize = '30px';
-                // console.log(navItems[nav_item].style.fontSize)
-                // });
                 document.querySelector('#menu').style.display = 'block';
                 console.log(document.querySelector('.nav-item').style.fontSize)
                 
@@ -111,9 +96,7 @@
             }
             // for mobile devices screen size
             else{
-                if(window.matchMedia(('screen and (min-width: 320px) and (max-width: 480px)')))
                 document.querySelector('nav').style.display = 'none';
-                // document.querySelector('.nav-item').style.fontSize = '60px';
                 document.querySelector('#menu').style.display = 'block';
                 console.log(document.querySelector('.nav-item').style.fontSize)
             }

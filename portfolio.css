@@ -22,6 +22,45 @@
     font-family: Heebo;
     src: url(Fonts/static/Heebo-Medium.ttf);
 }
+/* For responsive design */
+@media screen and (min-width: 769px){
+    .home-title{
+      color: red;
+    }
+}
+@media screen and (max-width: 768px){
+    .home-title{
+      color: green;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .home-title{
+      color: blue;
+      font-size: 30px !important;
+    }
+    a.borderless{
+        font-size: 12px !important;
+    }
+    i.fa{
+        margin-top: 10px;
+    }
+    /* a.about-title{
+        font-size: 10px !important;
+    } */
+    a.nav-item{
+        font-size: 10px !important;
+    }
+    .aboutMe{
+        font-size: 24px !important;
+    }
+    .mySelf{
+        font-size: 16px !important;
+    }
+    .resume{
+        font-size: 12px !important;
+        margin-left: 35px !important;
+    }
+}
 /* Home Section CSS */
 .nav-bar{
     position: absolute;
@@ -32,7 +71,7 @@
 }
 h1.home-title{
     padding-bottom: 3%;
-    font-family: Heebo;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 65px;
     /* color: white; */
 }
@@ -40,8 +79,8 @@ a.borderless{
     border: 0 none;
     text-decoration: none;
     color: white;
-    /* font-size: 18px; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-family: Noto;
     background-color: transparent;
     font-weight: bold;
     padding-bottom: 2%;
@@ -100,8 +139,8 @@ i.fa{
 a.about-title{
     display: block;
     padding-top: 2%;
-    font-size: 40px;
-    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    color: cadetblue;
     text-align: center;
     text-decoration: none;
 }
@@ -135,7 +174,6 @@ a.about-title{
     font-size: 20px;
     line-height: 2;
 }
-/*  */
 .resume{
     font-size: 25px;
     font-family: Noto;
