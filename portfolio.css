@@ -36,39 +36,61 @@
         margin-top: 10px;
     }
     .aboutMe{
-        font-size: 28px !important;
+        font-size: 1.5em !important;
     }
     .mySelf{
-        font-size: 16px !important;
+        font-size: 0.8em !important;
     }
     .resume{
-        font-size: 16px !important;
-        /* margin-left: 40px !important; */
+        font-size: 0.8em !important;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 480px){
     .home-title{
       color: blue;
-      font-size: 30px !important;
+      font-size: 1.8em !important;
     }
     a.borderless{
-        font-size: 12px !important;
+        font-size: 0.8em !important;
     }
     i.fa{
         margin-top: 10px;
     }
     a.nav-item{
-        font-size: 12px !important;
+        font-size: 0.8em !important;
     }
     .aboutMe{
-        font-size: 24px !important;
+        font-size: 1.5em !important;
     }
     .mySelf{
-        font-size: 16px !important;
+        font-size: 0.8em !important;
     }
     .resume{
-        font-size: 12px !important;
-        /* margin-left: 35px !important; */
+        font-size: 0.6em !important;
+    }
+    .experience-title{
+        font-size: 1.2em !important;
+    }
+    .academic-text{
+        font-size: 1.2em !important;
+    }
+    .university dt{
+        font-size: 0.7em !important;
+    }
+    .university dd{
+        font-size: 0.7em !important;
+    }
+    .academic-year h4{
+        font-size: 1.2em !important;
+    }
+    .basic-education dt{
+        font-size: 0.7em !important;
+    }
+    .basic-education dd{
+        font-size: 0.7em !important;
+    }
+    .p-right{
+        font-size: 0.8em !important;
     }
 }
 /* Home Section CSS */
@@ -171,7 +193,7 @@ a.about-title{
 }
 .profile{
     width: 100%;
-    height: 800px;
+    height: auto;
     /* padding: 5% 5% 3%; */
     margin-top: 5%;
     margin-bottom: 3%;
@@ -208,7 +230,7 @@ a.about-title{
 }
 .learning-image{
     width: 400px;
-    height: 220px;
+    height: auto;
     float: left;
     margin-right: 40px;
 }
@@ -226,7 +248,7 @@ a.about-title{
 /* Academic Section */
 .academic-profile{
     width: 500px;
-    height: 600px;
+    height: auto;
     float: left;
 }
 .academic-text{
