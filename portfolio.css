@@ -38,60 +38,60 @@
     .aboutMe{
         font-size: 1.5em !important;
     }
-    .mySelf{
+    .mySelf, .resume{
         font-size: 0.8em !important;
     }
-    .resume{
+    /* .resume{
         font-size: 0.8em !important;
-    }
+    } */
 }
 @media screen and (min-width: 320px) and (max-width: 480px){
     .home-title{
       color: blue;
       font-size: 1.8em !important;
     }
-    a.borderless{
+    a.borderless, a.nav-item, .mySelf, .p-right{
         font-size: 0.8em !important;
     }
     i.fa{
         margin-top: 10px;
     }
-    a.nav-item{
+    /* a.nav-item{
         font-size: 0.8em !important;
-    }
+    } */
     .aboutMe{
         font-size: 1.5em !important;
     }
-    .mySelf{
+    /* .mySelf{
         font-size: 0.8em !important;
-    }
+    } */
     .resume{
         font-size: 0.6em !important;
     }
-    .experience-title{
+    .experience-title, .academic-text, .academic-year h4{
         font-size: 1.2em !important;
     }
-    .academic-text{
+    /* .academic-text{
         font-size: 1.2em !important;
-    }
-    .university dt{
+    } */
+    .university dt, .university dd, .basic-education dt, .basic-education dd{
         font-size: 0.7em !important;
     }
-    .university dd{
+    /* .university dd{
         font-size: 0.7em !important;
-    }
-    .academic-year h4{
+    } */
+    /* .academic-year h4{
         font-size: 1.2em !important;
-    }
-    .basic-education dt{
+    } */
+    /* .basic-education dt{
         font-size: 0.7em !important;
     }
     .basic-education dd{
         font-size: 0.7em !important;
-    }
-    .p-right{
+    } */
+    /* .p-right{
         font-size: 0.8em !important;
-    }
+    } */
 }
 /* Home Section CSS */
 .nav-bar{
