@@ -28,6 +28,9 @@
       color: green !important;
       font-size: 2.5em !important;
     }
+    a.borderless{
+        font-size: 1em !important;
+    }
     i.fa{
         margin-top: 10px;
     }
