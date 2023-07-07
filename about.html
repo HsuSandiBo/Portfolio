@@ -27,14 +27,13 @@
             </div>
         </div> 
     </nav>
-    <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
+    <button id="menu"><i class="fa-solid fa-bars fa-2x d-block d-md-block d-lg-block d-xl-block d-xxl-none"></i></button>
 
     <img class="profile" src="images/profile.jpg" alt="profile">
     <h1 class="aboutMe">ABOUT ME</h1>
-    <p class="mySelf">Hi! My name is Hsu Sandi Bo. I’m 20 years old. I'm an ICT student from Rangsit University.<br>
-        I have studied at the Branch of Basic Education High School, Tamu. In 2019, I have passed the matriculation exam. 
-        After this, I have joined the University of Computer Studies, Yangon. But unfortunately, I couldn’t attend 
-        due to the Covid-19 virus and the situations of my country. <br>
+    <p class="mySelf">Hi! My name is Hsu Sandi Bo. I'm an ICT student from Rangsit University.<br>
+        I have studied at the Branch of Basic Education High School, Myanmar. In 2019, I have passed the matriculation exam. 
+        After this, I have joined the University of Computer Studies, Yangon. <br>
         Now, I am studying information and communication technology as a first year student at Rangsit University.<br>
         In spare time, I like to learn new languages and doing handicrafts like crochet. 
         My goal is to be a professional web developer and software engineer to invent new applications that will be useful for all people.
@@ -85,13 +84,13 @@
             {  
                 document.querySelector('nav').style.display = 'flex';
                 document.querySelector('nav').style.textAlign = 'center';
-                document.querySelector('#menu').style.display = 'none';
+                // document.querySelector('#menu').style.display = 'none';
                 console.log(document.querySelector('.nav-item').style.fontSize)
             }
             // for tablet screen size
             else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth) {
                 document.querySelector('nav').style.display = 'none';
-                document.querySelector('#menu').style.display = 'block';
+                // document.querySelector('#menu').style.display = 'block';
                 console.log(document.querySelector('.nav-item').style.fontSize)
                 
                 
@@ -99,7 +98,7 @@
             // for mobile devices screen size
             else{
                 document.querySelector('nav').style.display = 'none';
-                document.querySelector('#menu').style.display = 'block';
+                // document.querySelector('#menu').style.display = 'block';
                 console.log(document.querySelector('.nav-item').style.fontSize)
             }
         })
