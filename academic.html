@@ -27,7 +27,7 @@
                 </div>
             </div> 
         </nav>
-        <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
+        <button id="menu"><i class="fa-solid fa-bars fa-2x d-block d-md-block d-lg-block d-xl-block d-xxl-none"></i></button>
 
     <h2 class="experience-title">ACADEMIC BACKGROUND</h2><hr>
     <div class="row flex-column flex-lg-row">
@@ -120,13 +120,13 @@
             if(window.innerWidth == screen.availWidth){ 
                 document.querySelector('nav').style.display = 'flex';
                 document.querySelector('nav').style.textAlign = 'center';
-                document.querySelector('#menu').style.display = 'none';
+                // document.querySelector('#menu').style.display = 'none';
             }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
                 document.querySelector('nav').style.display = 'none';
-                document.querySelector('#menu').style.display = 'block';
+                // document.querySelector('#menu').style.display = 'block';
             }else{
                 document.querySelector('nav').style.display = 'none';
-                document.querySelector('#menu').style.display = 'block';
+                // document.querySelector('#menu').style.display = 'block';
                 console.log(window.innerWidth)
             }
         })
