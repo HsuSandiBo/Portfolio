@@ -22,49 +22,6 @@
     font-family: Heebo;
     src: url(Fonts/static/Heebo-Medium.ttf);
 }
-/* For responsive design */
-@media screen and (max-width: 768px){
-    .home-title{
-      color: green !important;
-      font-size: 2.5em !important;
-    }
-    a.borderless{
-        font-size: 1em !important;
-    }
-    i.fa{
-        margin-top: 10px;
-    }
-    .aboutMe{
-        font-size: 1.5em !important;
-    }
-    .mySelf, .resume{
-        font-size: 0.8em !important;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 480px){
-    .home-title{
-      color: blue !important;
-      font-size: 1.8em !important;
-    }
-    a.borderless, a.nav-item, .mySelf, .p-right{
-        font-size: 0.8em !important;
-    }
-    i.fa{
-        margin-top: 10px;
-    }
-    .aboutMe{
-        font-size: 1.5em !important;
-    }
-    .resume{
-        font-size: 0.6em !important;
-    }
-    .experience-title, .academic-text, .academic-year h4{
-        font-size: 1.2em !important;
-    }
-    .university dt, .university dd, .basic-education dt, .basic-education dd{
-        font-size: 0.7em !important;
-    }
-}
 /* Home Section CSS */
 .nav-bar{
     position: absolute;
@@ -162,6 +119,7 @@ a.about-title{
 }
 .nav-tabs{
     border-bottom: none;
+    display: flex;
 }
 .profile{
     width: 100%;
@@ -194,6 +152,7 @@ a.about-title{
 /* Learning experiences Section */
 #menu{
     border: none;
+    display: none;
 }
 .experience-title{
     text-align: center;
@@ -248,4 +207,59 @@ a.about-title{
     font-family: Noto;
     font-size: 20px;
     padding-left: 20px;
+}
+/* For responsive design */
+@media screen and (max-width: 768px){
+    .home-title{
+      color: green !important;
+      font-size: 2.5em !important;
+    }
+    a.borderless{
+        font-size: 1em !important;
+    }
+    i.fa{
+        margin-top: 10px;
+    }
+    .aboutMe{
+        font-size: 1.5em !important;
+    }
+    .mySelf, .resume{
+        font-size: 0.8em !important;
+    }
+    #menu{
+        display: block;
+    }
+    .nav-tabs{
+        display: none;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .home-title{
+      color: blue !important;
+      font-size: 1.8em !important;
+    }
+    a.borderless, a.nav-item, .mySelf, .p-right{
+        font-size: 0.8em !important;
+    }
+    i.fa{
+        margin-top: 10px;
+    }
+    .aboutMe{
+        font-size: 1.5em !important;
+    }
+    .resume{
+        font-size: 0.6em !important;
+    }
+    .experience-title, .academic-text, .academic-year h4{
+        font-size: 1.2em !important;
+    }
+    .university dt, .university dd, .basic-education dt, .basic-education dd{
+        font-size: 0.7em !important;
+    }
+    #menu{
+        display: block;
+    }
+    .nav-tabs{
+        display: none;
+    }
 }

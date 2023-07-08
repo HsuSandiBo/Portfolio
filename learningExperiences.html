@@ -13,7 +13,7 @@
     <a class="about-title" href="index.html"><h1>HSU SANDI BO</h1></a>
 
     <nav class="navbar navbar-expand-lg justify-content-center">
-        <div class="navbar-nav nav-tabs">  <!--d-none d-lg-inline not work in here-->
+        <div class="navbar-nav nav-tabs menuBar">  <!--d-none d-lg-inline not work in here-->
             <a class="nav-item nav-link me-3" href="index.html" target="_blank">Home</a>
             <a class="nav-item nav-link me-3" href="about.html">About Me</a>
             <a class="nav-item nav-link active me-3" href="#">Learning Experiences</a>
@@ -28,7 +28,7 @@
             </div>
         </div> 
     </nav>
-    <button id="menu"><i class="fa-solid fa-bars fa-2x d-block d-md-block d-lg-block d-xl-block d-xxl-none"></i></button>
+    <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
 
     <h2 class="experience-title">LEARNING EXPERIENCES</h2><hr>
     <div class="row flex-column flex-lg-row">
@@ -90,39 +90,47 @@
 
         console.log(`screen ${screen.availWidth}`)
         //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
-        window.addEventListener('resize', e => {
-            // var maxWidth = screen.availWidth - window.innerWidth === 0;
+        // window.addEventListener('resize', e => {
+        //     // var maxWidth = screen.availWidth - window.innerWidth === 0;
             
-            if(window.innerWidth == screen.availWidth){ 
-                document.querySelector('nav').style.display = 'flex';
-                document.querySelector('nav').style.textAlign = 'center';
-                // document.querySelector('#menu').style.display = 'none';
-            }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-            }else{
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-                console.log(window.innerWidth)
-            }
-        })
+        //     if(window.innerWidth == screen.availWidth){ 
+        //         document.querySelector('nav').style.display = 'flex';
+        //         document.querySelector('nav').style.textAlign = 'center';
+        //         // document.querySelector('#menu').style.display = 'none';
+        //     }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //     }else{
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(window.innerWidth)
+        //     }
+        // })
+
+        // function showNav(){
+        //     if(document.querySelector('.nav-tabs').style.display === 'none'){
+        //         document.querySelector('.nav-tabs').style.display = 'flex';
+        //         document.querySelector('.nav-tabs').style.textAlign = 'center';
+        //     }else if(document.querySelector('.nav-tabs').style.display !== 'none'){
+        //         document.querySelector('.nav-tabs').style.display = 'none';
+        // }};
 
         menu.addEventListener("click", e => {
-            console.log(document.querySelector('nav').style.display)
-            if(document.querySelector('nav').style.display === 'none'){
+            console.log(document.querySelector('.nav-tabs').style.display)
+            if(document.querySelector('.nav-tabs').style.display === 'none'){
                 expand(); //block
-            }else if(document.querySelector('nav').style.display !== 'none'){
+            }else if(document.querySelector('.nav-tabs').style.display !== 'none'){
                 collapse();
         }
         });
 
         function collapse(){
-            document.querySelector('nav').style.display = 'none';
+            document.querySelector('.nav-tabs').style.display = 'none';
         }
 
         function expand(){
-            document.querySelector('nav').style.display = 'flex';
-            document.querySelector('nav').style.textAlign = 'center';
+            document.querySelector('.nav-tabs').style.display = 'flex';
+            document.querySelector('.nav-tabs').style.textAlign = 'center';
         }
     </script>
 </body>

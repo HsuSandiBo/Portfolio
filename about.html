@@ -27,7 +27,7 @@
             </div>
         </div> 
     </nav>
-    <button id="menu"><i class="fa-solid fa-bars fa-2x d-block d-md-block d-lg-block d-xl-block d-xxl-none"></i></button>
+    <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
 
     <img class="profile" src="images/profile.jpg" alt="profile">
     <h1 class="aboutMe">ABOUT ME</h1>
@@ -73,52 +73,52 @@
 
         console.log(`screen ${screen.availWidth}`)
         //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
-        window.addEventListener('resize', e => {
-            // var maxWidth = screen.availWidth - window.innerWidth === 0;
-            // To output default font size
-            // console.log(window.getComputedStyle(document.body).getPropertyValue('font-size'))
-            console.log(`inner ${window.innerWidth}`)
+        // window.addEventListener('resize', e => {
+        //     // var maxWidth = screen.availWidth - window.innerWidth === 0;
+        //     // To output default font size
+        //     // console.log(window.getComputedStyle(document.body).getPropertyValue('font-size'))
+        //     console.log(`inner ${window.innerWidth}`)
 
-            // for laptop screen size 
-            if(window.innerWidth == screen.availWidth)
-            {  
-                document.querySelector('nav').style.display = 'flex';
-                document.querySelector('nav').style.textAlign = 'center';
-                // document.querySelector('#menu').style.display = 'none';
-                console.log(document.querySelector('.nav-item').style.fontSize)
-            }
-            // for tablet screen size
-            else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth) {
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-                console.log(document.querySelector('.nav-item').style.fontSize)
+        //     // for laptop screen size 
+        //     if(window.innerWidth == screen.availWidth)
+        //     {  
+        //         document.querySelector('nav').style.display = 'flex';
+        //         document.querySelector('nav').style.textAlign = 'center';
+        //         // document.querySelector('#menu').style.display = 'none';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
+        //     }
+        //     // for tablet screen size
+        //     else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth) {
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
                 
                 
-            }
-            // for mobile devices screen size
-            else{
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-                console.log(document.querySelector('.nav-item').style.fontSize)
-            }
-        })
+        //     }
+        //     // for mobile devices screen size
+        //     else{
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
+        //     }
+        // })
 
         menu.addEventListener("click", e => {
-            console.log(document.querySelector('nav').style.display)
-            if(document.querySelector('nav').style.display === 'none'){
+            console.log(document.querySelector('.nav-tabs').style.display)
+            if(document.querySelector('.nav-tabs').style.display === 'none'){
                 expand(); //block
-            }else if(document.querySelector('nav').style.display !== 'none'){
+            }else if(document.querySelector('.nav-tabs').style.display !== 'none'){
                 collapse();
         }
         });
 
         function collapse(){
-            document.querySelector('nav').style.display = 'none';
+            document.querySelector('.nav-tabs').style.display = 'none';
         }
 
         function expand(){
-            document.querySelector('nav').style.display = 'flex';
-            document.querySelector('nav').style.textAlign = 'center';
+            document.querySelector('.nav-tabs').style.display = 'flex';
+            document.querySelector('.nav-tabs').style.textAlign = 'center';
         }
     </script>
 </body>

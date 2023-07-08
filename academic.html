@@ -114,39 +114,39 @@
 
         console.log(`screen ${screen.availWidth}`)
         //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
-        window.addEventListener('resize', e => {
-            // var maxWidth = screen.availWidth - window.innerWidth === 0;
+        // window.addEventListener('resize', e => {
+        //     // var maxWidth = screen.availWidth - window.innerWidth === 0;
             
-            if(window.innerWidth == screen.availWidth){ 
-                document.querySelector('nav').style.display = 'flex';
-                document.querySelector('nav').style.textAlign = 'center';
-                // document.querySelector('#menu').style.display = 'none';
-            }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-            }else{
-                document.querySelector('nav').style.display = 'none';
-                // document.querySelector('#menu').style.display = 'block';
-                console.log(window.innerWidth)
-            }
-        })
+        //     if(window.innerWidth == screen.availWidth){ 
+        //         document.querySelector('nav').style.display = 'flex';
+        //         document.querySelector('nav').style.textAlign = 'center';
+        //         // document.querySelector('#menu').style.display = 'none';
+        //     }else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth){
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //     }else{
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(window.innerWidth)
+        //     }
+        // })
 
         menu.addEventListener("click", e => {
-            console.log(document.querySelector('nav').style.display)
-            if(document.querySelector('nav').style.display === 'none'){
+            console.log(document.querySelector('.nav-tabs').style.display)
+            if(document.querySelector('.nav-tabs').style.display === 'none'){
                 expand(); //block
-            }else if(document.querySelector('nav').style.display !== 'none'){
+            }else if(document.querySelector('.nav-tabs').style.display !== 'none'){
                 collapse();
             }
         });
 
         function collapse(){
-            document.querySelector('nav').style.display = 'none';
+            document.querySelector('.nav-tabs').style.display = 'none';
         }
 
         function expand(){
-            document.querySelector('nav').style.display = 'flex';
-            document.querySelector('nav').style.textAlign = 'center';
+            document.querySelector('.nav-tabs').style.display = 'flex';
+            document.querySelector('.nav-tabs').style.textAlign = 'center';
         }
     </script>
 </body>
