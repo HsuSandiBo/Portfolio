@@ -159,6 +159,9 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5em;
 }
+::placeholder {
+    font-size: 18px;
+}
 #contact .submitBtn{
     padding: 5px 15px;
     border-radius: 5px;
@@ -251,7 +254,7 @@ body{
         margin-top: 30px;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 480px){
     .navBar{
         display: none;
         margin: 0;
@@ -297,23 +300,18 @@ body{
     .iconBar i:hover{
         color: aqua;
     }
-    .grid, .offer, .albums, #contact{
+    body{
+        width: 1000px;
+    }
+    .bg-image{
+        width: 950px;
+        margin-left: 20px;
+    }
+    .grid, .offer, .albums, #contact, .grid img, .offer img{
         display: block;
-    }
-    /* .aboutUs, .services{
-        display: block;
-    } */
-    .services{
-        margin-bottom: 30px;
-    }
-    .offer img{
-        margin-left: 30px;
-    }
-    .albums .images{
-        width: 100%;
-        height: auto;
+        width: 940px;
     }
     .camera{
-        margin-top: 30px;
+        margin-left: 30px;
     }
 }
