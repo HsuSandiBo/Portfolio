@@ -8,63 +8,149 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .button{
+            position: absolute;
+            border: none;
+            display: none;
+            border-radius: 50% 50%;
+            box-shadow: 0 0 8px rgb(207, 207, 207);
+            width: 40px;
+            height: 40px;
+            top: 30px;
+            right: 30px;
+            padding: 8px;
+            background-color: #f9f8fc;
+            border: 2.5px solid #0e172c;
+            transition: background-color 2.2s;
+            transition-duration: 3s;
+            transition: 1.5s;
+        }
+        .button:hover{
+            position: absolute;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 8px #f9f8fc;
+            top: 30px;
+            background-color: #fec7d7;
+        } 
+        
+        .button i{
+            font-size: 20px;
+            color:#0e172c;
+            transition: 1.5s;
+        }
+        .button i:hover{
+            /* letter-spacing: 5px; */
+            color: aqua;
+        }
+        .menu-bar .closebtn{
+                display: none;
+        }
+        /* .menu-bar .nav-link{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        } */
+        @media screen and (max-width: 768px){
+            .button{
+                display: block;
+            }
+            /* .menu-bar{
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 20px;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            .menu-bar .closebtn{
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            } */
+
+        }
+    </style>
 </head>
 <body>
-    <!-- <div>
-        <img class="image" srcset="images/6-mobile.jpg 320w, images/6-480w.jpg 1.5px, images/6.jpg" 
-        src="images/6.jpg" alt="hsdb_portfolio1"
-        sizes="(max-width: 480px) 100vw,
-        (max-width: 768px) 100vw,
-        100vw" style="display: block;">
-    </div> -->
-    <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-        <i class="fa-solid fa-bars fa-2x"></i>
-    </button>
-    <a class="about-title" href="index.html"><h1>HSU SANDI BO</h1></a>
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-        <nav class="navbar navbar-expand-lg justify-content-center">
-            <div class="navbar-nav nav-tabs">  <!--d-none d-lg-inline not work in here-->
-                <a class="nav-item nav-link me-3" href="index.html" target="_blank">Home</a>
-                <a class="nav-item nav-link active me-3" href="#">About Me</a>
-                <a class="nav-item nav-link me-3" href="learningExperiences.html">Learning Experiences</a>
-                <a class="nav-item nav-link me-3" href="academic.html">Academic</a>
-                <div class="dropdown"> <!-- for dropdown only div -->
-                    <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown" href="projects.html">Projects</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="../../../photography_website/photography/index.html" target="_blank">Project 1</a>
-                        <a class="dropdown-item" href="#" target="_blank">Project 2</a>
-                        <a class="dropdown-item" href="#" target="_blank">Project 3</a>
-                    </div>
-                </div>
-            </div> 
+    <div class="button btn" type="button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+
+    <div class="menu-bar">
+        <nav class="nav nav-fill navbar navbar-expand-lg justify-content-center">
+            <li><a class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li class="nav-link"><a href="#">HOME</a></li>
+            <li class="nav-link"><a href="#about-page">ABOUT US</a></li>
+            <li class="nav-link"><a href="#client-albums">CLIENT ALBUMS</a></li>
+            <li class="nav-link"><a href="#contact">CONTACT</a></li>
         </nav>
     </div>
     
+    <script>
+        var button = document.querySelector('.button');
 
-    <!-- <script>
-        var menu = document.querySelector('#menu');
-
-        menu.addEventListener("click", e => {
-            console.log(document.querySelector('nav').style.display)
-            if(document.querySelector('nav').style.display === 'none'){
-                document.querySelector('nav').style.display = 'flex';
-                document.querySelector('nav').style.textAlign = 'center';
-                // expand(); //block
-            }else if(document.querySelector('nav').style.display !== 'none'){
-                // collapse();
-                document.querySelector('nav').style.display = 'none';
+        button.addEventListener("click", e => {
+            console.log(e.target)
+            console.log(document.querySelector('.menu-bar').style.display)
+            if(document.querySelector('.menu-bar').style.display === 'none'){
+                expand(); //block
+            }else if(document.querySelector('.menu-bar').style.display !== 'none'){
+                collapse();
         }
         });
 
-        // function collapse(){
-        //     document.querySelector('nav').style.display = 'none';
-        // }
+        function collapse(){
+            document.querySelector('.menu-bar').style.display = 'none';
+            // document.querySelector('.menu-bar').style.height = '100%';
+            // document.querySelector('.menu-bar').style.width = '0';
+            // document.querySelector('.menu-bar').style.position = 'fixed';
+            // document.querySelector('.menu-bar').style.zIndex = '1';
+            // document.querySelector('.menu-bar').style.top = '0';
+            // document.querySelector('.menu-bar').style.right = '20px';
+            // document.querySelector('.menu-bar').style.backgroundColor = '#111';
+            // document.querySelector('.menu-bar').style.overflowX = 'hidden';
+            // document.querySelector('.menu-bar').style.transition = '0.5s';
+            // document.querySelector('.menu-bar').style.paddingTop = '60px';
+        }
 
-        // function expand(){
-        //     document.querySelector('nav').style.display = 'flex';
-        //     document.querySelector('nav').style.textAlign = 'center';
-        // }
-    </script> -->
+        function expand(){
+            document.querySelector('.button').style.display = 'none';
+            document.querySelector('.menu-bar').style.display = 'block';
+            document.querySelector('.menu-bar').style.height = '100%';
+            document.querySelector('.menu-bar').style.width = '0';
+            document.querySelector('.menu-bar').style.position = 'fixed';
+            document.querySelector('.menu-bar').style.zIndex = '1';
+            document.querySelector('.menu-bar').style.top = '0';
+            document.querySelector('.menu-bar').style.right = '150px';
+            document.querySelector('.menu-bar').style.backgroundColor = 'red';
+            // document.querySelector('.menu-bar').style.overflowX = 'hidden';
+            document.querySelector('.menu-bar').style.transition = '0.5s';
+            document.querySelector('.menu-bar').style.paddingTop = '60px';
+            // document.querySelector('.menu-bar').style.textAlign = 'center';
+            document.querySelectorAll('.menu-bar .nav-link').style.padding = '8px 8px 8px 32px';
+            document.querySelector('.menu-bar .nav-link').style.textDecoration = 'none';
+            document.querySelector('.menu-bar .nav-link').style.fontSize = '25px';
+            document.querySelector('.menu-bar .nav-link').style.color = 'blue';
+            // document.querySelector('.menu-bar .nav-link').style.display = 'block';
+            document.querySelector('.menu-bar .nav-link').style.transition = '0.3s';
+        }
+    </script>
 </body>
 </html>

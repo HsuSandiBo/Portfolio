@@ -12,27 +12,28 @@
     <link rel="stylesheet" href="photography.css">
 </head>
 <body>
-    <div class="bg-image"></div>
+    <div class="bg-image">
+        <div class="home-text">
+            <h1 class="sunshine-title">Hello! This is Sunshine Photography.</h1>
+            <h4>Create your precious memories with our services...</h4>
+            <button class="btn btn-light p-3 mt-3" type="summit"><a href="#client-albums" class="text-dark text-decoration-none h5">
+                Explore My Photography...</a></button>
+        </div>
+    </div>
 
     <div class="menu-bar">
-        <nav class="nav nav-fill">
+        <nav class="nav navBar">
             <li class="nav-link"><a href="#">HOME</a></li>
             <li class="nav-link"><a href="#about-page">ABOUT</a></li>
             <li class="nav-link"><a href="#client-albums">CLIENT ALBUMS</a></li>
             <li class="nav-link"><a href="#contact">CONTACT</a></li>
         </nav>
-    </div>
-
-    <div class="home-text">
-        <h1 class="sunshine-title">Hello! This is Sunshine Photography.</h1>
-        <h4>Create your precious memories with our services...</h4>
-        <button class="btn btn-light p-3 mt-3" type="summit"><a href="#client-albums" class="text-dark text-decoration-none h5">
-            Explore My Photography...</a></button>
+        <button class="iconBar"><i class="fa-solid fa-bars fa-2x"></i></button>
     </div>
 
     <div id="about-page">
         <div class="grid">
-            <img src="images/photographer.jpg" width="700" height="500">
+            <img src="images/photographer.jpg">
             <div class="aboutUs">
                 <h3>About Our Website</h3>
                 <p> My name is Miss Alice. Photographer, video creator and graphic designer from Myanmar.
@@ -56,7 +57,7 @@
                 </ul>
                 <a href="#contact" class="booking">Get in Touch</a>
             </div>
-            <div><img src="images/service.jpg" width="750" height="500"></div>
+            <div><img src="images/service.jpg"></div>
         </div>
     </div><hr style="border-top: 3px dashed black;">
 
@@ -138,5 +139,28 @@
         <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a><br>
         <span> &copy; by <a href="index.html" class="text-decoration-none text-warning sunshine">Sunshine Photography</a></span>
     </footer>
+
+    <script>
+        var openIcon = document.querySelector('.iconBar');
+        // var navItems = document.querySelectorAll('.nav-link');
+
+        openIcon.addEventListener("click", e => {
+            if(document.querySelector('.navBar').style.display === 'none'){
+                expand(); //block
+            }else if(document.querySelector('.navBar').style.display !== 'none'){
+                collapse();
+        }
+        });
+
+        function collapse(){
+            document.querySelector('.navBar').style.display = 'none';
+            openIcon.innerHTML = '<i class="fa-solid fa-bars fa-2x"></i>';
+        }
+
+        function expand(){
+            document.querySelector('.navBar').style.display = 'block';
+            openIcon.innerHTML = '<i class="fa-solid fa-rectangle-xmark fa-2x"></i>';
+        }
+    </script>
 </body>
 </html>

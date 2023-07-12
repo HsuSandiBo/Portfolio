@@ -8,6 +8,8 @@ body{
     background-repeat: no-repeat;
     width: 100%;
     height: 800px;
+    object-fit: cover;
+    display: block;
     position: relative;
 }
 .menu-bar{
@@ -17,21 +19,34 @@ body{
     left: 0;
     right: 0;
 }
-.menu-bar a{
+.navBar{
+    margin: auto 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar a{
     text-decoration: none;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5em;
 }
-.menu-bar a:hover{
+.navBar a:hover{
     border: 2px solid black;
-    padding: 10px;
+    color: salmon;
+    padding: 5px;
     border-radius: 3px;
+}
+.iconBar{
+    border: none;
+    display: none;
 }
 .home-text{
     position: absolute;
     top: 25%;
-    left: 30%; 
+    left: 0;
+    right: 0;
+    bottom: 0; 
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -42,10 +57,17 @@ body{
 }
 
 /* For About section */
-.grid{
+/* .grid{
     display: flex;
     margin-top: 40px;
     margin-left: 20px;
+} */
+.grid img{
+    margin-left: 40px;
+}
+.grid img, .services img{
+    width: 700px;
+    height: auto;
 }
 .aboutUs h3, .services h3{
     font-size: 40px;
@@ -61,7 +83,7 @@ body{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
-.offer{
+.offer, .grid{
     display: grid;
     grid-template-columns: 750px auto;
     margin-top: 40px;
@@ -164,4 +186,134 @@ body{
 .back-btn i:hover{
     background-color: cadetblue;
     box-shadow: 0 4px 8px 0 black;
+}
+/* For responsive */
+@media screen and (max-width: 768px){
+    .navBar{
+        display: none;
+        margin: 0;
+    }
+    .navBar li{
+        background-color: black;
+    }
+    .navBar a{
+        color: white;
+        font-size: 18px;
+    }
+    .iconBar{
+        display: block;
+        position: absolute;
+        border: none;
+        border-radius: 50% 50%;
+        box-shadow: 0 0 8px rgb(207, 207, 207);
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        right: 30px;
+        padding: 8px;
+        background-color: #f9f8fc;
+        border: 2.5px solid #0e172c;
+        transition: background-color 2.2s;
+        transition-duration: 3s;
+        transition: 1.5s;
+    }
+    .iconBar:hover{
+        position: absolute;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #f9f8fc;
+        top: 30px;
+        background-color: #fec7d7;
+    } 
+    .iconBar i{
+        font-size: 20px;
+        color:#0e172c;
+        transition: 1.5s;
+    }
+    .iconBar i:hover{
+        color: aqua;
+    }
+    .grid, .offer, .albums, #contact{
+        display: block;
+    }
+    .services{
+        margin-bottom: 30px;
+    }
+    .offer img{
+        margin-left: 30px;
+    }
+    .albums .images{
+        width: 100%;
+        height: auto;
+    }
+    .camera{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 480px){
+    .navBar{
+        display: none;
+        margin: 0;
+    }
+    .navBar li{
+        background-color: black;
+    }
+    .navBar a{
+        color: white;
+        font-size: 18px;
+    }
+    .iconBar{
+        display: block;
+        position: absolute;
+        border: none;
+        border-radius: 50% 50%;
+        box-shadow: 0 0 8px rgb(207, 207, 207);
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        right: 30px;
+        padding: 8px;
+        background-color: #f9f8fc;
+        border: 2.5px solid #0e172c;
+        transition: background-color 2.2s;
+        transition-duration: 3s;
+        transition: 1.5s;
+    }
+    .iconBar:hover{
+        position: absolute;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #f9f8fc;
+        top: 30px;
+        background-color: #fec7d7;
+    } 
+    .iconBar i{
+        font-size: 20px;
+        color:#0e172c;
+        transition: 1.5s;
+    }
+    .iconBar i:hover{
+        color: aqua;
+    }
+    .grid, .offer, .albums, #contact{
+        display: block;
+    }
+    /* .aboutUs, .services{
+        display: block;
+    } */
+    .services{
+        margin-bottom: 30px;
+    }
+    .offer img{
+        margin-left: 30px;
+    }
+    .albums .images{
+        width: 100%;
+        height: auto;
+    }
+    .camera{
+        margin-top: 30px;
+    }
 }
