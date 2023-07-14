@@ -32,7 +32,7 @@ body{
     font-size: 1.5em;
 }
 .navBar a:hover{
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     color: salmon;
     padding: 5px;
     border-radius: 3px;
@@ -50,10 +50,15 @@ body{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+.home-text .sunshine-title{
+    font-size: 3.5em;
+}
 .home-text .sunshine-title:hover{
-    font-size: 50px;
-    font-style: italic;
-    color: saddlebrown;
+    color: white;
+    text-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
 }
 
 /* For About section */
@@ -102,6 +107,7 @@ body{
     color: black;
     font-size: 20px;
     border: 1px solid black;
+    border-radius: 10px;
     padding: 10px;
 }
 .services .booking:hover, .promotion:hover{
@@ -113,9 +119,11 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 #client-albums h1:hover{
-    color: lawngreen;
-    text-transform: uppercase;
-    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 0 5px #e5f907,
+                0 0 25px #e5f907,
+                0 0 50px #e5f907,
+                0 0 100px #e5f907;
 }
 .images{
     width: 450px;
@@ -201,16 +209,16 @@ body{
     }
     .navBar a{
         color: white;
-        font-size: 18px;
+        font-size: 1.2em;
     }
     .iconBar{
         display: block;
         position: absolute;
         border: none;
-        border-radius: 50% 50%;
+        border-radius: 50%;
         box-shadow: 0 0 8px rgb(207, 207, 207);
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
         top: 30px;
         right: 30px;
         padding: 8px;
@@ -230,7 +238,7 @@ body{
         background-color: #fec7d7;
     } 
     .iconBar i{
-        font-size: 20px;
+        font-size: 40px;
         color:#0e172c;
         transition: 1.5s;
     }
@@ -267,7 +275,7 @@ body{
     }
     .navBar a{
         color: white;
-        font-size: 18px;
+        font-size: 1.6em;
     }
     .iconBar{
         display: block;
@@ -275,8 +283,8 @@ body{
         border: none;
         border-radius: 50% 50%;
         box-shadow: 0 0 8px rgb(207, 207, 207);
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
         top: 30px;
         right: 30px;
         padding: 8px;
@@ -296,7 +304,7 @@ body{
         background-color: #fec7d7;
     } 
     .iconBar i{
-        font-size: 20px;
+        font-size: 40px;
         color:#0e172c;
         transition: 1.5s;
     }
@@ -310,12 +318,22 @@ body{
         width: 950px;
         margin-left: 20px;
     }
-    .aboutUs h3{
+    .aboutUs h3, .services h3{
+        font-size: 4em;
+        margin-top: 20px;
+    }
+    .aboutUs p, .services ul li, .services .booking, .promotion{
         font-size: 2em;
     }
     .grid, .offer, .albums, #contact, .grid img, .offer img{
         display: block;
         width: 940px;
+    }
+    .albums h3{
+        font-size: 2.8em;
+    }
+    #contact, .back-btn{
+        font-size: 2.5em;
     }
     .camera{
         margin-left: 30px;
