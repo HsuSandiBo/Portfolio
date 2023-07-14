@@ -109,6 +109,15 @@ a.all-title{
 .dropdown:hover .dropdown-menu{
     display: block;
 }
+.dropdown-item{
+    font-family: 'Times New Roman', Times, serif;
+}
+.dropdown-item:hover{
+    color: blue;
+}
+.dropdown-item:visited{
+    color: red;
+}
 .nav-item{
     color: black;
     font-family: Noto;
