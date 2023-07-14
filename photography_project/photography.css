@@ -237,6 +237,9 @@ body{
     .iconBar i:hover{
         color: aqua;
     }
+    .aboutUs h3{
+        font-size: 2em;
+    }
     .grid, .offer, .albums, #contact{
         display: block;
     }
@@ -306,6 +309,9 @@ body{
     .bg-image{
         width: 950px;
         margin-left: 20px;
+    }
+    .aboutUs h3{
+        font-size: 2em;
     }
     .grid, .offer, .albums, #contact, .grid img, .offer img{
         display: block;
