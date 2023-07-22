@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Projects By Hsu Sandi Bo</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="nav-title">
+        <a class="about-title" href="index.php"><h1>HSU SANDI BO</h1></a>
+        <nav class="nav nav-tabs justify-content-center">
+            <a class="nav-item nav-link" href="index.php" target="_blank">Home</a>
+            <a class="nav-item nav-link" href="about.php">About Me</a>
+            <a class="nav-item nav-link" href="learningExperiences.php">Learning Experiences</a>
+            <a class="nav-item nav-link" href="academic.php">Academic</a>
+            <div class="dropdown"> <!-- for dropdown only div -->
+                <a class="nav-item dropdown-toggle nav-link active" data-bs-toggle="dropdown" href="#">Projects</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="photography_project/index.php" target="_blank">Project 1</a>
+                    <a class="dropdown-item" href="#" target="_blank">Project 2</a>
+                    <a class="dropdown-item" href="#" target="_blank">Project 3</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

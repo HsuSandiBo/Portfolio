@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>About Me - Hsu Sandi Bo</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="body-margin">
+    <a class="all-title" href="index.php"><h1>HSU SANDI BO</h1></a>
+    <nav class="navbar navbar-expand-lg justify-content-center">
+        <div class="navbar-nav nav-tabs">  <!--d-none d-lg-inline not work in here-->
+            <a class="nav-item nav-link me-3" href="index.php" target="_blank">Home</a>
+            <a class="nav-item nav-link active me-3" href="#">About Me</a>
+            <a class="nav-item nav-link me-3" href="learningExperiences.php">Learning Experiences</a>
+            <a class="nav-item nav-link me-3" href="academic.php">Academic</a>
+            <div class="dropdown"> <!-- for dropdown only div -->
+                <a class="nav-item dropdown-toggle nav-link" data-bs-toggle="dropdown" href="projects.php">Projects</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="photography_project/index.php" target="_blank">Project 1</a>
+                    <a class="dropdown-item" href="#" target="_blank">Project 2</a>
+                    <a class="dropdown-item" href="#" target="_blank">Project 3</a>
+                </div>
+            </div>
+        </div> 
+    </nav>
+    <button id="menu"><i class="fa-solid fa-bars fa-2x"></i></button>
+
+    <img class="profile" src="images/profile.jpg" alt="profile">
+    <h1 class="aboutMe">ABOUT ME</h1>
+    <p class="mySelf">Hi! My name is Hsu Sandi Bo. I'm an ICT student from Rangsit University.<br>
+        I have studied at the Branch of Basic Education High School, Myanmar. In 2019, I have passed the matriculation exam. 
+        After this, I have joined the University of Computer Studies, Yangon. <br>
+        Now, I am studying information and communication technology as a first year student at Rangsit University.<br>
+        In spare time, I like to learn new languages and doing handicrafts like crochet. 
+        My goal is to be a professional web developer and software engineer to invent new applications that will be useful for all people.
+    </p>
+    <center><a href="CV_form.pdf" target="_blank">
+        <button class="resume btn btn-dark text-light" type="submit">DOWNLOAD RESUME</button></a>
+    </center> 
+    <img class="profile" src="images/profile1.jpg" alt="profile">
+    <div class="icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-brands fa-linkedin-in"></i></a>
+        <a href="https://mail.google.com" target="_blank"><i class="fa fa-regular fa-envelope"></i></a>
+    </div>
+
+    <script>
+        var icons = document.querySelectorAll('.fa');
+        
+        icons.forEach(icon => {
+        icon.addEventListener('mouseover', e => {
+            icons.forEach(otherIcon => {
+            if (otherIcon !== icon) {
+                otherIcon.style.opacity = 0.5;
+            }
+            });
+        });
+
+        icon.addEventListener('mouseout', e => {
+            icons.forEach(otherIcon => {
+            if (otherIcon !== icon) {
+            otherIcon.style.opacity = 1;
+        }   });
+        });
+        });
+
+        var menu = document.querySelector('#menu');
+        console.log(menu)
+
+        console.log(`screen ${screen.availWidth}`)
+        //Task => to check maximum screen window size, use screen.availwidth,window.innerwidth
+        // window.addEventListener('resize', e => {
+        //     // var maxWidth = screen.availWidth - window.innerWidth === 0;
+        //     // To output default font size
+        //     // console.log(window.getComputedStyle(document.body).getPropertyValue('font-size'))
+        //     console.log(`inner ${window.innerWidth}`)
+
+        //     // for laptop screen size 
+        //     if(window.innerWidth == screen.availWidth)
+        //     {  
+        //         document.querySelector('nav').style.display = 'flex';
+        //         document.querySelector('nav').style.textAlign = 'center';
+        //         // document.querySelector('#menu').style.display = 'none';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
+        //     }
+        //     // for tablet screen size
+        //     else if(window.innerWidth >= screen.availWidth/2 && window.innerWidth < screen.availWidth) {
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
+                
+                
+        //     }
+        //     // for mobile devices screen size
+        //     else{
+        //         document.querySelector('nav').style.display = 'none';
+        //         // document.querySelector('#menu').style.display = 'block';
+        //         console.log(document.querySelector('.nav-item').style.fontSize)
+        //     }
+        // })
+
+        menu.addEventListener("click", e => {
+            console.log(document.querySelector('.nav-tabs').style.display)
+            if(document.querySelector('.nav-tabs').style.display === 'none'){
+                expand(); //block
+            }else if(document.querySelector('.nav-tabs').style.display !== 'none'){
+                collapse();
+        }
+        });
+
+        function collapse(){
+            document.querySelector('.nav-tabs').style.display = 'none';
+        }
+
+        function expand(){
+            document.querySelector('.nav-tabs').style.display = 'flex';
+            document.querySelector('.nav-tabs').style.textAlign = 'center';
+        }
+    </script>
+</body>
+</html>
