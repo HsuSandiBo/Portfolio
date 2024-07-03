@@ -4,8 +4,10 @@ session_start();
 
 include('../vendor/autoload.php');
 
-use Libs\Database\MySQL;
-use Libs\Database\CustomerInfoTable;
+// use Libs\Database\MySQL;
+// use Libs\Database\CustomerInfoTable;
+use Libs\Database\CustomersTable;
+use Libs\Database\connect;
 
 $data = ["first_name" => ucfirst($_POST['firstName']) ?? 'Unknown', 
         "last_name" => ucfirst($_POST['lastName']) ?? 'Unknown',
@@ -17,6 +19,7 @@ $data = ["first_name" => ucfirst($_POST['firstName']) ?? 'Unknown',
 $_SESSION['data'] = $data;
 
 $customer = new CustomerInfoTable(new MySQL()); //MySQL object for connection to database, table object for manage database
+
 if($customer){
     echo "Database connection open\n";
     $customer->insert($data);

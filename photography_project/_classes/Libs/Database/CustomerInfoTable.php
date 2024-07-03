@@ -25,11 +25,4 @@ class CustomerInfoTable{
             return $e->getMessage();
         }
     }
-
-    // public function showCustomers(){
-    //     $statement = $this->db->query(
-    //         "SELECT customers.* from customers"
-    //     );
-    //     return $this->db->fetchAll();
-    // }
 }

@@ -1,0 +1,319 @@
+/* For Home section */
+body{
+    background-color: cadetblue;
+}
+.bg-image{
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+.menu-bar{
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navBar{
+    margin: auto 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+.navBar a:hover{
+    border: 2px solid black;
+    color: salmon;
+    padding: 5px;
+    border-radius: 3px;
+}
+.iconBar{
+    border: none;
+    display: none;
+}
+.home-text{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.home-text .sunshine-title:hover{
+    font-size: 50px;
+    font-style: italic;
+    color: saddlebrown;
+}
+
+/* For About section */
+/* .grid{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 20px;
+} */
+.grid img{
+    margin-left: 40px;
+}
+.grid img, .services img{
+    width: 700px;
+    height: auto;
+}
+.aboutUs h3, .services h3{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.aboutUs p{
+    font-size: 1.5em;
+    line-height: 2;
+    margin: 40px 40px;
+    text-align: justify;
+}
+.aboutUs, .services{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.offer, .grid{
+    display: grid;
+    grid-template-columns: 750px auto;
+    margin-top: 40px;
+} 
+.services{
+    margin-top: 40px;
+}
+.services ul li{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2;
+    list-style-type: none;
+}
+.services .booking, .promotion{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.services .booking:hover, .promotion:hover{
+    color: brown;
+    background-color: grey;
+}
+/* For Client Albums section */
+#client-albums h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+#client-albums h1:hover{
+    color: lawngreen;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.images{
+    width: 450px;
+    height: 350px;
+}
+.albums{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.albums h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10px auto;
+}
+.albums img:hover{
+    /* opacity: 0.7; */
+    transform: scale(1.2);
+}
+/* For photo gallery page */
+.photo-title, .p-text{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 15px;
+}
+.iconSize{
+    /* height: 50px; */
+    width: 50px;
+    background-color:black;
+    border-radius: 15px;
+}
+/* For contact page */
+#contact{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+#contact .submitBtn{
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+#contact .submitBtn:hover{
+    background-color: cadetblue;
+}
+/* Footer section */
+.back-btn{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.back-btn a:hover{
+    text-decoration: none;
+}
+.back-btn i{
+    color: black;
+    padding: 10px;
+    border-radius: 0.6em 0.7em;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.back-btn i:hover{
+    background-color: cadetblue;
+    box-shadow: 0 4px 8px 0 black;
+}
+/* For responsive */
+@media screen and (max-width: 768px){
+    .navBar{
+        display: none;
+        margin: 0;
+    }
+    .navBar li{
+        background-color: black;
+    }
+    .navBar a{
+        color: white;
+        font-size: 18px;
+    }
+    .iconBar{
+        display: block;
+        position: absolute;
+        border: none;
+        border-radius: 50% 50%;
+        box-shadow: 0 0 8px rgb(207, 207, 207);
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        right: 30px;
+        padding: 8px;
+        background-color: #f9f8fc;
+        border: 2.5px solid #0e172c;
+        transition: background-color 2.2s;
+        transition-duration: 3s;
+        transition: 1.5s;
+    }
+    .iconBar:hover{
+        position: absolute;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #f9f8fc;
+        top: 30px;
+        background-color: #fec7d7;
+    } 
+    .iconBar i{
+        font-size: 20px;
+        color:#0e172c;
+        transition: 1.5s;
+    }
+    .iconBar i:hover{
+        color: aqua;
+    }
+    .grid, .offer, .albums, #contact{
+        display: block;
+    }
+    .services{
+        margin-bottom: 30px;
+    }
+    .offer img{
+        margin-left: 30px;
+    }
+    .albums .images{
+        width: 100%;
+        height: auto;
+    }
+    .camera{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 480px){
+    .navBar{
+        display: none;
+        margin: 0;
+    }
+    .navBar li{
+        background-color: black;
+    }
+    .navBar a{
+        color: white;
+        font-size: 18px;
+    }
+    .iconBar{
+        display: block;
+        position: absolute;
+        border: none;
+        border-radius: 50% 50%;
+        box-shadow: 0 0 8px rgb(207, 207, 207);
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        right: 30px;
+        padding: 8px;
+        background-color: #f9f8fc;
+        border: 2.5px solid #0e172c;
+        transition: background-color 2.2s;
+        transition-duration: 3s;
+        transition: 1.5s;
+    }
+    .iconBar:hover{
+        position: absolute;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px #f9f8fc;
+        top: 30px;
+        background-color: #fec7d7;
+    } 
+    .iconBar i{
+        font-size: 20px;
+        color:#0e172c;
+        transition: 1.5s;
+    }
+    .iconBar i:hover{
+        color: aqua;
+    }
+    .grid, .offer, .albums, #contact{
+        display: block;
+    }
+    /* .aboutUs, .services{
+        display: block;
+    } */
+    .services{
+        margin-bottom: 30px;
+    }
+    .offer img{
+        margin-left: 30px;
+    }
+    .albums .images{
+        width: 100%;
+        height: auto;
+    }
+    .camera{
+        margin-top: 30px;
+    }
+}

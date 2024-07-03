@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../photography_website/fontawesome/css/all.min.css">
+</head>
+<body class="container-fluid">
+    <div class="about-cover">
+        <img src="images/service-banner.jpg">
+        <div class="about-nav">
+            <h1>Our Services</h1>
+            <a href="index.html">HOME</a> | <a href="#">SERVICES</a>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul class="navBar">
+            <li class="navItem"><a href="index.html">HOME</a></li>
+            <li class="navItem"><a href="aboutUs.html">ABOUT US</a></li>
+            <li class="navItem"><a href="#">SERVICES</a></li>
+            <li class="navItem"><a href="shop.html">SHOP</a></li>
+            <li class="navItem"><a href="contact.html">CONTACT US</a></li>
+            <li class="navItem">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+        </ul>
+    </div>
+    <button class="openIcon"><i class="fa-solid fa-bars fa-2x"></i></button>
+
+    <div class="serviceOpt">
+        <div class="ourServices">
+            <div class="flowerOpt">
+                <i class="fa-solid fa-spray-can-sparkles fa-2x"></i>
+                <h3>Fragrant Flowers and Colorful Plants</h3>
+                <p>
+                   We provide colorful and shiny plants for both indoors and outdoors.
+                </p>
+            </div>
+    
+            <div class="bouquetOpt">
+                <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+                <h3>Flower Bouquets and Packaging Designs</h3>
+                <p>
+                    Packaged with printed cellophane and tied with ribbon or twine.
+                </p>
+            </div>
+            
+            <div class="deliveryOpt">
+                <i class="fa-solid fa-truck fa-2x"></i>
+                <h3>Send Your Love with Our Flower Delivery</h3>
+                <p>
+                    We guarantee same day delivery for all orders received on time.
+                </p>
+            </div>
+        </div>
+
+        <div class="service_text">
+            <img class="flowers" src="images/flower3.jpg">
+            <h2 class="flower_title">Fragrant Flowers and Colorful Plants</h2>
+            <p class="flower_text">
+                Hello friends, flowers are the most beautiful part of nature. 
+                It is the flowers that make nature look so colorful.
+                Flowers and humans have a very long relationship which is ever since we exist. 
+                The flower is present in all of our occasions and they play a very important role, 
+                and definitely, flowers are the most beautiful gift God has gifted to our planet.
+            </p>
+
+            <img class="bouquet" src="images/bouq4.jpg">
+            <h2 class="bouquet_title">Flower Bouquets and Packaging Designs</h2>
+            <p class="bouquet_text">
+                Flower bouquets are nature's poetry, capturing emotions in vibrant petals
+                and fragrant whispers. Packaging designs cradle these delicate blooms, 
+                intertwining creativity and functionality to ensure a stunning and lasting impression. 
+                The artistry of bouquet packaging amplifies the floral story, creating an enticing 
+                visual symphony that awakens the senses. 
+            </p>
+
+            <img class="delivery" src="images/delivery.jpg">
+            <h2 class="delivery_title">Send Your Love with Our Flower Delivery</h2>
+            <p class="delivery_text">
+                Each bloom handpicked and arranged to convey your heartfelt emotions in vivid colors.
+                Our expertly packaged bouquets ensure a pristine arrival, 
+                a visual and olfactory delight that speaks volumes. With every delivery, 
+                your affectionate message is beautifully whispered through nature's delicate artistry.
+            </p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div><h3>Secret Garden - Floral Shop</h3></div>
+        <div class="garden">
+            <div>
+                <h4>Best Seller Flowers</h4>
+                <ul>
+                    <li><a href="#">Roses</a></li>
+                    <li><a href="#">Sunflowers</a></li>
+                    <li><a href="#">Tulips</a></li>
+                    <li><a href="#">Carnations</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Available Bouquets</h4>
+                <ul>
+                    <li><a href="#">Hand-tied Bouquets</a></li>
+                    <li><a href="#">Biedermeier Bouquets</a></li>
+                    <li><a href="#">Nosegay Bouquets</a></li>
+                    <li><a href="#">Basket Bouquets</a></li>
+                    <li><a href="#">Presentation Bouquets</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border: 1px solid rgba(47, 46, 46, 0.884);">
+       <p class="copyright">&copy;Copyright Served by <a href="#">Secret Garden</a></p>
+    </footer>
+
+    <script>
+        var divs = document.querySelectorAll('.ourServices > div')
+        console.log(divs)
+
+        var text = document.querySelectorAll('.service_text > p')
+        console.log(text)
+
+        var title = document.querySelector('.flower_title');
+        var new_title = document.querySelector('.bouquet_title');
+
+        for(i=0;i<divs.length;i++){
+            divs[i].addEventListener('click', e => {
+                console.log(title)
+            //     if(e.target == divs[i].className){
+            //     console.log(text[i].innerHTML)
+            // }
+            })
+        }
+        // var flowerBtn = document.querySelector('.flowerOpt');
+        // var bouquetBtn = document.querySelector('.bouquetOpt')
+        // var deliveryBtn = document.querySelector('.deliveryOpt')
+
+        // 
+        
+        // var text = document.querySelector('.flower_text');
+        // var new_text = document.querySelector('.bouquet_text');
+
+        
+        // bouquetBtn.addEventListener('click' ,e => {
+        //     title.innerHTML = new_title.innerHTML;
+        //     text.innerHTML = new_text.innerHTML;
+
+        // })
+
+    </script>
+</body>
+</html>

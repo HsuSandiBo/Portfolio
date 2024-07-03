@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Online Shopping Website</title>
+    <link rel="stylesheet" href="../photography_website/fontawesome/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body class="container-fluid">
+    <div class="shopCover">
+        <img src="images/cover.jpg" alt="coverImage">
+        <div class="shop-title">
+            <h2>Secret Garden</h2>
+            <h4>Flower Bouquets and Floral Gifts</h4>
+            <h6>Make Your Day Beautiful with A Bouquet of Love</h6>
+            <a href="shop.html">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <ul class="navBar">
+            <li class="navItem"><a href="#">HOME</a></li>
+            <li class="navItem"><a href="aboutUs.html">ABOUT US</a></li>
+            <li class="navItem"><a href="services.html">SERVICES</a></li>
+            <li class="navItem"><a href="shop.html">SHOP</a></li>
+            <li class="navItem"><a href="contact.html">CONTACT US</a></li>
+            <li class="navItem">
+                <div class='searchIcon'>
+                    <button class='label'>
+                        <span class='icon'><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>         
+                    <input type='text' class='input expand' name='search'>      
+                </div>
+               
+                <button class="cartIcon" data-bs-toggle="modal" data-bs-target="#checkOut">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge"></span>
+                </button>
+
+                <button class="userIcon" data-bs-toggle="modal" data-bs-target="#signInForm">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <button class="openIcon"><i class="fa-solid fa-bars fa-2x"></i></button>
+
+    <div class="modal fade" id="checkOut">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ms-1">Checkout Items</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <table class="table check_out">
+                        
+                    </table>
+
+                    <div class="fw-bold mb-3">
+                        Subtotal: $<span class="subtotal">0</span>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%;">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signInForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Create Account</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <lable for="first_name">First Name</lable><br>
+                        <input class="form-control" type="text" name="first_name" placeholder="Type Your First Name"><br>
+            
+                        <lable for="last_name">Last Name</lable><br>
+                        <input class="form-control" type="text" name="last_name" placeholder="Type Your Last Name"><br>
+            
+                        <lable for="email">Email</lable><br>
+                        <input class="form-control" type="text" name="email" placeholder="Type Your Email"><br>
+            
+                        <lable for="phone">Phone Number</lable><br>
+                        <input class="form-control" type="tel" name="phone_number" placeholder="Type Your Phone Number"><br>
+            
+                        <label for="password">Password</label><br>
+                        <input class="form-control" type="password" name="password"><br>
+            
+                        <label for="confirm_password">Confirm Password</label><br>
+                        <input class="form-control" type="password" name="confirm_password"><br>
+            
+                        <input class="form-check-input" type="checkbox" name="agreement">
+                        By signing up you agree to our terms and conditions and privacy policy.<br>
+            
+                        <button class="btn btn-primary" type="reset" name="clear">Reset</button>
+                        <button class="btn btn-primary" type="submit" name="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="recommend"><h1>Recommends For You</h1></div>
+    <div class="items">
+        <div class="item">
+            <img src="images/rose1.jpg" alt="rose">
+            <button id="rose_btn" value=15 data-bs-toggle="modal" data-bs-target="#rose">
+                Beautiful Roses<br>
+                (15 items)
+            </button>
+        </div>
+
+        <div class="modal fade" id="rose">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title ms-1">Roses</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+    
+                    <div class="modal-body">
+                        <table class="table roseShop">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/cactus1.jpg" alt="cactus">
+            <button id="cactus_btn" value=10 data-bs-toggle="modal" data-bs-target="#cactus">
+                Cactus Plants<br>
+                (10 items)
+            </button>
+        </div>
+
+        <div class="modal fade" id="cactus">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title ms-1">Cactus</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+    
+                    <div class="modal-body">
+                        <table class="table cactusShop">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/flower1.jpg" alt="floral">
+            <button value=8 data-bs-toggle="modal" data-bs-target="#flower">
+                Floral flowers<br>
+                (8 items)
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="flower">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ms-1">Floral flowers</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <table class="table flowerShop">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="items">
+        <div class="item">
+            <img src="images/plant1.jpg" alt="plants">
+            <button value=25 data-bs-toggle="modal" data-bs-target="#plant">
+                Indoor Plants<br>
+                (25 items)
+            </button>
+        </div>
+
+        <div class="modal fade" id="plant">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title ms-1">Indoor Plants</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+    
+                    <div class="modal-body">
+                        <table class="table plantShop">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/succ1.jpg" alt="succulent">
+            <button value=12 data-bs-toggle="modal" data-bs-target="#succ">
+                Succulent Plants<br>
+                (12 items)
+            </button>
+        </div>
+
+        <div class="modal fade" id="succ">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title ms-1">Succulent Plants</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+    
+                    <div class="modal-body">
+                        <table class="table succShop">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/bouq3.jpg" alt="bouquet">
+            <button value=10 data-bs-toggle="modal" data-bs-target="#bouq">
+                Flower Bouquets<br>
+                (10 customized samples)
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bouq">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ms-1">Flower Bouquets</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <table class="table bouqShop">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div><img src="images/service.png" alt="service"></div>
+        <div class="offer">
+            <h2>ABOUT US</h2>
+            <h3>What we do and offer for you</h3>
+            <p>At Secret Garden, we believe that every person is unique and deserves 
+            the most inspiring bouquet created especially for them. 
+            We work with the freshest, high quality flowers available, and 
+            deliver a one-of-a-kind arrangement perfect for the occasion.
+            Give us a call to 083-59848849 for your personal order.
+            Or fill out our contact form <a href="#contact" id="booking">HERE</a> for one of our excellent 
+            team members to personally contact you.
+            Make your beloved person surprise with our flower bouquet of love.</p>
+        </div>
+    </div>
+
+    <div id="arrival"><h2>New Arrivals For You</h2></div>
+    <div class="products">
+        <div class="product">
+            <img src="images/new1.jpg" alt="new1">
+            <span>
+                Tulips<br>
+                $2
+            </span>
+            <button href='#' data-imglink="new1.jpg" data-name='Tulip' data-price='2.0' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new2.jpg" alt="new2">
+            <span>
+                Hydrangea<br>
+                $3
+            </span>
+            <button href='#' data-imglink="new2.jpg" data-name='Hydrangea' data-price='3.0' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new3.jpg" alt="new3">
+            <span>
+                Pilea<br>
+                $4
+            </span>
+            <button href='#' data-imglink="new3.jpg" data-name='Pilea' data-price='4.0' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new4.jpg" alt="new4">
+            <span>
+                Daisy<br>
+                $15.5
+            </span>
+            <button href='#' data-imglink="new4.jpg" data-name='Daisy' data-price='15.5' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <img src="images/new5.jpg" alt="new5">
+            <span>
+                Bonsai<br>
+                $12.5
+            </span>
+            <button href='#' data-imglink="new5.jpg" data-name='Bonsai' data-price='12.5' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new6.jpg" alt="new6">
+            <span>
+                Sunflowers<br>
+                $19.9
+            </span>
+            <button href='#' data-imglink="new6.jpg" data-name='Sunflowers' data-price='19.9' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new7.jpg" alt="new7">
+            <span>
+                Gladiolus<br>
+                $10.5
+            </span>
+            <button href='#' data-imglink="new7.jpg" data-name='Gladiolus' data-price='10.5' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/new8.jpg" alt="new8">
+            <span>
+                Soleirolia<br>
+                $13.5
+            </span>
+            <button href='#' data-imglink="new8.jpg" data-name='Soleirolia' data-price='13.5' class="shopBtn btn btn-light text-dark"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="service">
+        <div>
+            <i class="fa-solid fa-spray-can-sparkles fa-2x"></i>
+            <h3>Fragrant Flowers and Colorful Plants</h3>
+            <p>
+               We provide colorful and shiny succs for both indoors and outdoors.
+               And, Flowers from our local garden are fragrant with subtle meanings.
+            </p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+            <h3>Flower Bouquets and Packaging Designs</h3>
+            <p>
+                Packaged with printed cellophane and tied with ribbon, twine and other 
+                customized things. We also provide the glass vase, American florists used.
+            </p>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-truck fa-2x"></i>
+            <h3>Send Your Love with Our Flower Delivery</h3>
+            <p>
+                Our flowers delivery service operates 7 days a week, from 8:30 AM to 7 PM. 
+                We guarantee same day delivery for all orders received on time.
+            </p>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="address">
+            <ul>
+                <li><i class="fa-solid fa-phone-volume"></i> 
+                    (+959) 586-478-214 / (+959) 288-156-667
+                </li>
+                <li><i class="fa-solid fa-location-dot"></i>
+                    No.38/105, Thitsar st., Mingalardon, Yangon.
+                </li>
+                <li><i class="fa-solid fa-envelope"></i>
+                    info.secretgarden@gmail.com
+                </li>
+
+                <li><i class="fa-solid fa-clock"></i>
+                    Monday - Friday 9:00-5:00pm
+                    Saturday 9:00-4:00pm
+                </li>
+
+                <li><i class="fa-solid fa-map-location-dot"></i><br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61102.70920356416!2d96.12494594373932!3d16.830357851302985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193a4a13384ef%3A0x3ac560a598412131!2sElisa%20Floral%20Culture%20Flower%20Shop%20%E8%8A%B1%E5%BA%97!5e0!3m2!1sen!2sth!4v1691054714277!5m2!1sen!2sth" 
+                    width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contactForm">
+            <form>
+                <label for="name">Full Name</label><br>
+                <input type="text" name="name" placeholder="Type your name here"><br>
+
+                <label for="email">Email</label><br>
+                <input type="text" name="email" placeholder="example@gmail.com"><br>
+
+                <label for="phone">Phone Number</label><br>
+                <input type="tel" name="phone"><br>
+
+                <label for="date">Which day do you want?</label><br>
+                <input type="date" name="date"><br>
+                
+                <label for="bouquet">Your Order</label><br>
+                <select name="bouquet">
+                    <option>Flower Bouquets</option>
+                    <option>Fragrant Flowers</option>
+                    <option>Fresh Plants</option>
+                    <option>Indoor Plants</option>
+                    <option>Wedding Decoration</option>
+                </select><br>
+
+                <label for>Comment</label><br>
+                <textarea name="message"></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div><h3>Secret Garden - Floral Shop</h3></div>
+        <div class="garden">
+            <div>
+                <h4>Best Seller Flowers</h4>
+                <ul>
+                    <li><a href="#">Roses</a></li>
+                    <li><a href="#">Sunflowers</a></li>
+                    <li><a href="#">Tulips</a></li>
+                    <li><a href="#">Carnations</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Available Bouquets</h4>
+                <ul>
+                    <li><a href="#">Hand-tied Bouquets</a></li>
+                    <li><a href="#">Biedermeier Bouquets</a></li>
+                    <li><a href="#">Nosegay Bouquets</a></li>
+                    <li><a href="#">Basket Bouquets</a></li>
+                    <li><a href="#">Presentation Bouquets</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border: 1px solid rgba(47, 46, 46, 0.884);">
+       <p class="copyright">&copy;Copyright Served by <a href="#">Secret Garden</a></p>
+    </footer>
+
+    <script src="myScript.js"></script>
+</body>
+</html>

@@ -102,7 +102,7 @@
         <div>
             <h2>Let's Talk</h2>
             <p> 5/98 Thiri Yadanar St.Tamu, Sagaing, Myanmar.<br>Tel: 09-165484158</p>
-            <form method="post" action="_actions/customerInfo.php">
+            <form method="post" action="_actions/addCustomers.php">
                 <label>First Name</label><br>
                 <input type="text" placeholder="Enter Your First Name" name="firstName"><br>
 
