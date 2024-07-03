@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    width: 100%;
+    height: 100px;
+}
+.navbar{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 300px;
+}
+.navItem{
+    list-style-type: none;
+    font-size: 1.5em;
+}
+.navItem a{
+    text-decoration: none;
+    color: black;
+}
+.navItem a:hover{
+    color: rgb(28, 113, 234);
+}
+.navItem a:active{
+    color: green;
+}
+.albums{
+    width: 100%;
+    height: 100%;
+}
+.albums img, .portrait img, .nature img, .product img, .event img{
+    width: 100%;
+    height: 100%;
+}
+.one, .four, .eight{
+    width: 25%;
+    height: 500px;
+    float: left;
+    margin-left: 50px;
+}
+.two, .five, .seven{
+    width: 40%;
+    height: 400px;
+    float: left;
+    margin-left: 20px;
+}
+.three, .six, .nine{
+    width: 25%;
+    height: 500px;
+    float: left;
+    margin-left: 20px;
+}
+.four, .six, .seven, .eight, .nine{
+    margin-top: 20px;
+}
+.five{
+    margin-top: -70px;
+    height: 580px;
+}
+.seven{
+    margin-left: 50px;
+    height: 450px;
+}
+.eight{
+    margin-left: 20px;
+    height: 450px;
+}
+.nine{
+    height: 450px;
+}
+.ten, .eleven, .twelve{
+    width: 30%;
+    height: 600px;
+    float: left;
+    margin-top: 20px;
+}
+.ten{
+    margin-left: 50px;
+}
+.eleven, .twelve{
+    margin-left: 20px;
+}
+.clear{
+    clear: both;
+}
+.copyright{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5em;
+}
+.copyright i{
+    margin-right: 20px;
+}
+/* Portrait Page */
+.portrait{
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 20px;
+}
+.portrait .focus, .nature .landscape, .product .ads, .event .ceremony{
+    padding-left: 150px;
+}
+/* Landscape Page */
+.nature{
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 20px;
+}
+/* Product Page */
+.product, .event{
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 20px;
+}
+/* For Responsive */
+@media screen and (max-width: 768px){
+    .navigation{
+        width: 50%;
+        height: auto;
+        display: block;
+    }
+    .navbar{
+        width: 50%;
+        height: 100%;
+        display: block;
+    }
+    .navItem{
+        margin-top: 10px;
+        border-bottom: 1px solid grey;
+        display: block;
+    }
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve{
+        margin: 10px;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .portrait, .nature, .product, .event{
+        margin: 10px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .portrait .focus, .nature .landscape, .product .ads, .event .ceremony{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 320px){
+    .navigation{
+        width: 50%;
+        height: auto;
+        display: block;
+    }
+    .navbar{
+        width: 50%;
+        height: 100%;
+        display: block;
+    }
+    .navItem{
+        margin-top: 10px;
+        border-bottom: 1px solid grey;
+        display: block;
+    }
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve{
+        margin: 10px;
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .portrait, .nature, .product, .event{
+        margin: 10px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .portrait .focus, .nature .landscape, .product .ads, .event .ceremony{
+        margin: 0;
+        padding: 0;
+    }
+}
