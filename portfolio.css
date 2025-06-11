@@ -306,7 +306,7 @@ a.all-title{
     .experience-title, .academic-text, .academic-year h4{
         font-size: 1.2em !important;
     }
-    .university dt, .university dd, .basic-education dt, .basic-education dd{
+    .skillList li, .university dt, .university dd, .basic-education dt, .basic-education dd{
         font-size: 0.7em !important;
     }
     #menu{
